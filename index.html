@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settle Up</title>
+    <link rel="icon" href="./Assets/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/5548f5ed00.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="heap.js"></script>
+    <script src="script.js" type="module"></script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light"
+      style="
+        font-size: 30px;
+        font-weight: bolder;
+        background-color: whitesmoke;
+        letter-spacing: 3px;
+      "
+    >
+      <img
+        src="./Assets/logo.png"
+        width="60rem"
+        height="65rem"
+        class="d-inline-block align-top"
+        alt=""
+      />
+      Settle Up
+    </nav>
+    <div class="row" id="container">
+      <div class="col-lg-6" id="mynetwork"></div>
+      <div class="col-lg-6" id="container2">
+        <span id="temptext">
+          <div
+            style="
+              width: 80%;
+              font-size: 1rem;
+              margin: 2rem auto;
+              font-family: 'Lato', sans-serif;
+            "
+          >
+            Using an algorithm, SettleUp helps groups of people restructure
+            debt. Although the total amount anyone owes remains the same, this
+            reduces the total number of payments to make it easier for them to
+            pay it back.
+          </div>
+
+          <div
+            style="
+              width: 100%;
+              text-align: center;
+              font-size: 1.5rem;
+              margin: 2rem 0 auto;
+              font-family: 'Lato', sans-serif;
+            "
+          >
+            Click on solve to minimize the total number of payments !
+          </div>
+          <div
+            style="
+              width: 80%;
+              text-align: center;
+              font-size: 1rem;
+              margin: 0 auto;
+              font-family: 'Lato', sans-serif;
+            "
+          >
+            (Value written on edges represents the amount of money to be paid,
+            and the arrow on edge represents who has to pay whom)
+          </div>
+        </span>
+        <div id="mynetwork2" style="display: none"></div>
+      </div>
+      <div class="but row">
+        <div class="col-lg-12 m-2">
+          <button type="button" class="btn btn-info" id="generate-graph">
+            Get New Problem
+          </button>
+        </div>
+        <div class="col-lg-12 m-2">
+          <button type="button" class="btn btn-success" id="solve">
+            Solve
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
